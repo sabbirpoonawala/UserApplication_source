@@ -10,12 +10,10 @@ public class ConsoleUI {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
 		try(
 			InputStreamReader reader=
 			new InputStreamReader(System.in);
-				BufferedReader buffer=new BufferedReader(reader);
-				
+				BufferedReader buffer=new BufferedReader(reader);	
 	     ){
 			
 			System.out.print("Enter User Name:");
@@ -26,12 +24,9 @@ public class ConsoleUI {
 			
 			FrontController controller=new FrontController();
 			controller.userAuthentication(userName, password);
-			
-			
+				
 		}catch(IOException e) {
 			e.printStackTrace();
 		}
-
 	}
-
 }

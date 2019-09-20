@@ -7,7 +7,6 @@ import com.virtusa.repository.UserRepository;
 import com.virtusa.utilties.UserTypes;
 
 public class UserDAOImpl implements UserDAO {
-	
 	private List<User> userList=null;
 	
 	public UserDAOImpl() {
@@ -18,24 +17,15 @@ public class UserDAOImpl implements UserDAO {
 	@Override
 	public boolean userAuth(String userName, String password) {
 		// TODO Auto-generated method stub
-		
 		boolean result=false;
-		
-	
-		
-		
-		for(User user:userList) {
-			
+		for(User user:userList) {	
 			if(user.getUserName().equals(userName)) {
 				
 				if(user.getPassword().equals(password)) {
 					result= true;
 										
 				}
-				
 			}
-			
-			
 		}
 		
 		return result;

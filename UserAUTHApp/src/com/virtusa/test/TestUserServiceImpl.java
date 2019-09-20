@@ -11,9 +11,6 @@ import com.virtusa.model.UserModel;
 import com.virtusa.service.UserServiceImpl;
 
 class TestUserServiceImpl {
-	
-
-	
 	@Test
 	void testUserAuthenticationService_positive() {
 		 UserServiceImpl userServiceImpl=new UserServiceImpl();
@@ -28,7 +25,6 @@ class TestUserServiceImpl {
 			assertTrue(false);
 		}
 	}
-	
 	@Test
 	void testUserAuthenticationService_negative() {
 		 UserServiceImpl userServiceImpl=new UserServiceImpl();
@@ -36,8 +32,7 @@ class TestUserServiceImpl {
 		UserModel userModel=new UserModel();
 		userModel.setUserName("sabbirpoonawaladfdfdf");
 		userModel.setPassword("sabbir@123");
-		String actual=userServiceImpl.userAuthenticationService(userModel);
-		String expected="STUDENT";
+	    userServiceImpl.userAuthenticationService(userModel);
 		assertTrue(false);
 		}catch(UserException e) {
 			assertTrue(true);

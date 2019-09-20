@@ -31,13 +31,10 @@ public class FrontController {
 		}else if(userType.contentEquals("ADMIN")) {
 			AdminView adminView=new AdminView();
 			adminView.mainAdminView();
-		}else {
+		}		
+		}catch(UserException e) {
 			ErrorView errorView=new ErrorView();
 			errorView.authenticationError();
-		}
-		
-		}catch(UserException e) {
-			System.out.println("User Authentication failed.");
 			
 		}
 		

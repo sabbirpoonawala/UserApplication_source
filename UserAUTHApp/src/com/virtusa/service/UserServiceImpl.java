@@ -16,15 +16,11 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public String userAuthenticationService(UserModel userModel) {
 		// TODO Auto-generated method stub
-		
 		boolean userValid=
 				userDAO.userAuth(userModel.getUserName(), userModel.getPassword());
-		
-		
 		String userType=null;
 		if(userValid) {
-			userType=userDAO.retrieveUserType(userModel.getUserName());
-			
+			userType=userDAO.retrieveUserType(userModel.getUserName());	
 		}
 		else {
 			throw new UserException("Invalid username or password");

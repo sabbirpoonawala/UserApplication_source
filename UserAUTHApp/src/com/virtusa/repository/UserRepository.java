@@ -9,7 +9,6 @@ import com.virtusa.entities.User;
 import com.virtusa.utilties.UserTypes;
 
 public class UserRepository {
-	
 	private static List<User> userRepository=
 			new ArrayList<User>();
 	static{
@@ -23,7 +22,6 @@ public class UserRepository {
 		student.setPhoneNumber("9892937467");
 		student.setDateOfBirth("01-10-1977");
 		student.setStudentId("S001");
-		
 		student.setUserType(UserTypes.STUDENT);
 		userRepository.add(student);
 		
@@ -36,16 +34,10 @@ public class UserRepository {
 		admin.setPhoneNumber("7741973507");
 		admin.setDateOfBirth("01-10-1986");
 		admin.setAdminId("A001");
-		
 		admin.setUserType(UserTypes.ADMIN);
-		userRepository.add(admin);
-		
-		
+		userRepository.add(admin);	
 	}
 	public static List<User> getUserRepository() {
 		return userRepository;
 	}
-	
-	
-
 }

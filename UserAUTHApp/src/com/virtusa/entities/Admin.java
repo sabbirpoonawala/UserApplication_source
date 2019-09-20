@@ -3,7 +3,6 @@ package com.virtusa.entities;
  * 
  */
 public class Admin extends User {
-	
 	public Admin() {
 		
 	}
@@ -18,7 +17,4 @@ public class Admin extends User {
 	public String toString() {
 		return "Admin [adminId=" + adminId + "]";
 	}
-	
-	
-
 }
